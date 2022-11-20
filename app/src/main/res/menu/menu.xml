@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/terminology"
+        android:orderInCategory="101"
+        android:title="TERMINOLOGY"
+        android:onClick="alertDialogTerminology"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/aboutApp"
+        android:orderInCategory="101"
+        android:title="ABOUT APP"
+        android:onClick="alertDialogAboutApp"
+        app:showAsAction="never" />
+
+</menu>

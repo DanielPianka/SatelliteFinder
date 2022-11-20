@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainPage">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/locate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/locate"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="LOCATE CHOSEN OBJECT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <Button
+        android:id="@+id/go_to_list_view"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:text="LIST OF SATELLITES"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_list_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locate">
+
+        <TableLayout
+            android:layout_width="400dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/go_to_list_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locate">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="NAME: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/locate"
+                tools:layout_editor_absoluteX="6dp" />
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="LATITUDE: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="LONGITUDE: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/radial_length"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="RADIAL LENGTH: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="X: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/locate"
+                tools:layout_editor_absoluteX="6dp" />
+
+            <TextView
+                android:id="@+id/y"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Y: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/locate"
+                tools:layout_editor_absoluteX="6dp" />
+
+            <TextView
+                android:id="@+id/z"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Z: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/locate"
+                tools:layout_editor_absoluteX="6dp" />
+
+            <TextView
+                android:id="@+id/data_up_to_date_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="DATA UP TO DATE ON: "
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
